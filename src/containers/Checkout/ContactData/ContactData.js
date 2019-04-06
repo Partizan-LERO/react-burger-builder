@@ -5,6 +5,8 @@ import classes from './ContactData.css'
 import Spinner from "../../../components/UI/Spinner/Spinner";
 import Input from "../../../components/UI/Input/Input";
 
+import {connect} from "react-redux";
+
 class ContactData extends Component {
   state = {
     orderForm: {
@@ -104,7 +106,7 @@ class ContactData extends Component {
     }
 
     const order = {
-      ingredients: this.props.ingredients,
+      ingredients: this.props.ings,
       price: this.props.price,
       orderData: formData
     };
@@ -122,7 +124,7 @@ class ContactData extends Component {
     let isValid = true;
 
     if (rules.required) {
-      isValid = value.trim() != '' && isValid;
+      isValid = value.trim() !== '' && isValid;
     }
 
     if (rules.minLength) {
@@ -202,5 +204,11 @@ class ContactData extends Component {
   }
 }
 
+const mapStateToProps = state => {
+    return {
+        price: state.totalPrice,
+        ings: state.ingredients
+    }
+};
 
-export default ContactData;
+export default connect(mapStateToProps)(ContactData);
