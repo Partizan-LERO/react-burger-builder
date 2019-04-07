@@ -21,6 +21,10 @@
     box-sizing: border-box;
 }
 
+div.InputElement {
+    border:none;
+}
+
 .InputElement:focus {
     outline: none;
     background-color: #ccc;
