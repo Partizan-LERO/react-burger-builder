@@ -117,8 +117,8 @@
       "node"
     ],
     "watchPlugins": [
-      "C:\\projects\\burger-builder\\node_modules\\jest-watch-typeahead\\filename.js",
-      "C:\\projects\\burger-builder\\node_modules\\jest-watch-typeahead\\testname.js"
+      "/home/corazon/WebstormProjects/burger-builder/node_modules/jest-watch-typeahead/filename.js",
+      "/home/corazon/WebstormProjects/burger-builder/node_modules/jest-watch-typeahead/testname.js"
     ]
   },
   "babel": {
